@@ -11,3 +11,8 @@
     align-items: center;
     margin-left: auto;
 }
+
+#header-nav li {
+    display: inline-block;
+    margin-right: 2.1875rem;
+}
