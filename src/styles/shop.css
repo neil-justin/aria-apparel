@@ -1,0 +1,17 @@
+#shop-body {
+    margin: 2.5rem 0;
+}
+
+#shop-sidebar {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.75rem;
+}
+
+#shop-navbar li {
+    line-height: 2.5rem;
+}
+
+#shop-navbar-heading {
+    font-size: 1.25rem;
+}

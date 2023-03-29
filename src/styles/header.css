@@ -11,16 +11,3 @@
     align-items: center;
     margin-left: auto;
 }
-
-#header-nav li {
-    list-style-type: none;
-}
-
-#header-nav a {
-    font-size: 1rem;
-    text-decoration-line: none;
-}
-
-#header-nav a.active {
-    color: #f57224
-}
