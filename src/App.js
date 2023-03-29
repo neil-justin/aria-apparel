@@ -7,7 +7,7 @@ import Home from './components/Home';
 function App() {
   return (
     <div className="App">
-      <header>
+      <header id='app-header'>
         <span id="logo">Aria Apparel</span>
 
         <nav id='header-nav'>

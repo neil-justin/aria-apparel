@@ -1,5 +1,15 @@
+#app-header {
+    display: flex;
+}
+
 #logo {
     font-size: 1.75rem;
+}
+
+#header-nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
 }
 
 #header-nav li {
