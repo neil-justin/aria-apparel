@@ -7,6 +7,14 @@
     font-family: 'Roboto', sans-serif;
 }
 
+:root {
+    --secondary-color: #252525;
+}
+
+body {
+    min-width: 43.75rem;
+}
+
 .App {
     padding: 0.9375rem calc(0.9375rem * 5);
 }

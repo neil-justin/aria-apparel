@@ -1,0 +1,32 @@
+#home-main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: calc((0.625rem * 4) * 2) 0;
+}
+
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2.5rem;
+}
+
+#hero-para {
+    text-align: center;
+    font-size: 1.5625rem;
+    width: 34.375rem;
+}
+
+#hero-button {
+    font-size: 1.125rem;
+    padding: 0.625rem calc(0.625rem * 4);
+    background-color: var(--secondary-color);
+    border: transparent;
+    color: white;
+}
+
+#hero-button:hover {
+    cursor: pointer;
+    background-color: hsl(0, 0%, 10%);
+}
