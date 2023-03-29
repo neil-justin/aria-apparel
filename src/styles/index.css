@@ -1,0 +1,12 @@
+*,
+*::before,
+*::after {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.App {
+    padding: 0.9375rem calc(0.9375rem * 5);
+}
