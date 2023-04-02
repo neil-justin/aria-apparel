@@ -9,6 +9,7 @@
 
 :root {
     --secondary-color: hsl(0, 0%, 15%);
+    --accent-color: #f57224;
 }
 
 body {
@@ -18,18 +19,4 @@ body {
 
 .App {
     padding: 0.9375rem calc(0.9375rem * 5);
-}
-
-.navbar li {
-    list-style-type: none;
-}
-
-.navbar a {
-    font-size: 1rem;
-    text-decoration-line: none;
-    color: var(--secondary-color)
-}
-
-.navbar a.active {
-    color: #f57224
 }

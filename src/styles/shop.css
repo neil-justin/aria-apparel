@@ -2,16 +2,65 @@
     margin: 2.5rem 0;
 }
 
-#shop-sidebar {
+#shop-heading {
+    margin: 1.5625rem 0;
+}
+
+#products-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+    grid-auto-flow: row;
+    gap: 1.25rem;
+}
+
+.shop-product-container {
     display: flex;
+    row-gap: 1.4063rem;
     flex-direction: column;
-    row-gap: 0.75rem;
+    background-color: white;
+    padding: 1.4063rem;
 }
 
-#shop-navbar li {
-    line-height: 2.5rem;
+.shop-product-img {
+    display: block;
+    height: 14.0625rem;
+    margin: 0 auto;
 }
 
-#shop-navbar-heading {
-    font-size: 1.25rem;
+.shop-product-details {
+    display: flex;
+    /* this allow the element to contain the remaining
+    vertical height inside its parent element */
+    flex: 1;
+    flex-direction: column;
+    gap: 1.4063rem;
+    justify-content: space-between;
+}
+
+.shop-product-text {
+    font-size: 1.4063rem;
+}
+
+.shop-product-name {
+    color: var(--secondary-color);
+}
+
+.shop-product-price {
+    color: var(--accent-color);
+}
+
+.shop-product-inputs-container {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    column-gap: calc(1.25rem / 2);
+}
+
+.shop-product-input {
+    padding: calc(1.4063rem / 2);
+    background-color: whitesmoke;
+    border: none;
+}
+
+.add-to-cart-button {
+    cursor: pointer;
 }

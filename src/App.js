@@ -12,7 +12,7 @@ function App() {
       <header id='app-header'>
         <span id="logo">Aria Apparel</span>
 
-        <nav id='header-nav' className='navbar'>
+        <nav id='header-nav'>
           <ul>
             <li><NavLink to='/'>Home</NavLink></li>
             <li><NavLink to='/shop'>Shop</NavLink></li>

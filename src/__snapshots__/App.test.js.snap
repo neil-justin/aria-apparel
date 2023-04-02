@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component should render the home page by default 1`] = `
+<div>
+  <div
+    class="App"
+  >
+    <header
+      id="app-header"
+    >
+      <span
+        id="logo"
+      >
+        Aria Apparel
+      </span>
+      <nav
+        id="header-nav"
+      >
+        <ul>
+          <li>
+            <a
+              aria-current="page"
+              class="active"
+              href="/"
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              class=""
+              href="/shop"
+            >
+              Shop
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main
+      id="home-main-content"
+    >
+      <div
+        id="hero"
+      >
+        <h1>
+          Welcome to Aria Apparel!
+        </h1>
+        <p
+          id="hero-para"
+        >
+          Shop with ease and convenience at Aria Apparel. Find unbeatable prices on high-quality products, all in one convenient location
+        </p>
+        <button
+          id="hero-button"
+        >
+          Shop now
+        </button>
+      </div>
+    </main>
+  </div>
+</div>
+`;

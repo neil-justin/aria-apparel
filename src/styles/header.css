@@ -15,4 +15,11 @@
 #header-nav li {
     display: inline-block;
     margin-right: 2.1875rem;
+    list-style-type: none;
+}
+
+#header-nav a {
+    font-size: 1rem;
+    text-decoration-line: none;
+    color: var(--secondary-color)
 }
