@@ -1,9 +1,13 @@
-import { Route, Routes } from "react-router-dom";
 import ProductsList from "./ShopComponents/ProductsList";
 import React, { useState, useEffect } from "react";
 
-export default function Shop() {
-    const [products, setProducts] = useState(null);
+export default function Shop({
+    products,
+    retrieveProducts,
+    onItemQuantityChange,
+    onAddItem,
+    countCartItem,
+}) {
     const [isFetching, setIsFetching] = useState(true);
 
     useEffect(() => {
@@ -34,9 +38,8 @@ export default function Shop() {
 
         async function passProducts() {
             const temp = await filterProducts();
-            setProducts(temp);
+            retrieveProducts(temp);
             setIsFetching(false);
-            console.log(temp)
         }
 
         passProducts();
@@ -47,7 +50,12 @@ export default function Shop() {
             <h1 id='shop-heading'>Products</h1>
             {isFetching ?
                 <p>Fetching data...</p> :
-                <ProductsList products={products} />
+                <ProductsList
+                    products={products}
+                    onItemQuantityChange={onItemQuantityChange}
+                    onAddItem={onAddItem}
+                    countCartItem={countCartItem}
+                />
             }
         </main>
     )

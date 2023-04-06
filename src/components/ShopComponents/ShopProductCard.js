@@ -1,5 +1,25 @@
-export default function ShopProductCard({ product }) {
+
+import { useState } from "react";
+
+export default function ShopProductCard({
+    product,
+    itemId,
+    onItemQuantityChange,
+    onAddItem,
+    countCartItem
+}) {
     const { image, title, price } = product;
+    const [value, setValue] = useState(1);
+
+    function handleChange(e) {
+        setValue(e.target.value);
+        onItemQuantityChange(e);
+    }
+
+    function handleClick(e) {
+        onAddItem(e);
+        countCartItem();
+    }
 
     return (
         <div className="shop-product-container">
@@ -13,11 +33,15 @@ export default function ShopProductCard({ product }) {
                     type="number"
                     min='1'
                     step='1'
-                    defaultValue='1'
                     className="shop-product-text shop-product-input"
+                    data-input-item-id={itemId}
+                    value={value}
+                    onChange={handleChange}
                 />
                 <button
                     className="shop-product-text shop-product-input add-to-cart-button"
+                    data-button-item-id={itemId}
+                    onClick={handleClick}
                 >
                     Add to cart
                 </button>
