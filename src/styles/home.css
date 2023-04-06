@@ -12,11 +12,16 @@
     row-gap: 2.5rem;
 }
 
+#hero-heading {
+    text-align: center;
+}
+
 #hero-para {
     text-align: center;
     font-size: 1.5625rem;
-    width: 34.375rem;
+    max-width: 34.375rem;
     line-height: 2.1875rem;
+    word-wrap: break-word;
 }
 
 #hero-button {
