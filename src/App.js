@@ -29,14 +29,14 @@ function App() {
     setUserItemQuantities((prevUserItemQuantities) => {
       const updatedUserItemQuantities = {
         ...prevUserItemQuantities,
-        [parseInt(event.target.dataset.inputItemId)]: inputNumericValue,
+        [parseInt(event.target.dataset.shopInputFor)]: inputNumericValue,
       };
       return updatedUserItemQuantities;
     })
   }
 
   function handleAddItem(event) {
-    const chosenItemId = parseInt(event.target.dataset.buttonItemId);
+    const chosenItemId = parseInt(event.target.dataset.buttonFor);
 
     // early return when the added item have a quantity of 0
     if (userItemQuantities[chosenItemId] < 1) {

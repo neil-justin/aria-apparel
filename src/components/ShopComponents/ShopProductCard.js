@@ -34,13 +34,13 @@ export default function ShopProductCard({
                     min='1'
                     step='1'
                     className="shop-product-text shop-product-input"
-                    data-input-item-id={itemId}
+                    data-shop-input-for={itemId}
                     value={value}
                     onChange={handleChange}
                 />
                 <button
                     className="shop-product-text shop-product-input add-to-cart-button"
-                    data-button-item-id={itemId}
+                    data-button-for={itemId}
                     onClick={handleClick}
                 >
                     Add to cart
