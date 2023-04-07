@@ -135,7 +135,17 @@ function App() {
       </header>
 
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route
+          path='/'
+          element={
+            <Home
+              products={products}
+              retrieveProducts={(products) => setProducts(products)}
+              onItemQuantityChange={handleItemQuantityChange}
+              onAddItem={handleAddItem}
+              countCartItem={countCartItem}
+            />
+          } />
         <Route
           path='/shop'
           element={

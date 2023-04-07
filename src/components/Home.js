@@ -1,4 +1,13 @@
-export default function Home() {
+import { Link, Route, Routes } from "react-router-dom";
+import Shop from "./Shop";
+
+export default function Home(
+    products,
+    retrieveProducts,
+    onItemQuantityChange,
+    onAddItem,
+    countCartItem
+) {
     return (
         <main id="home-main-content">
             <div id="hero">
@@ -8,8 +17,27 @@ export default function Home() {
                     unbeatable prices on high-quality products, all in
                     one convenient location
                 </p>
-                <button id='hero-button'>Shop now</button>
+                <button id='hero-button'>
+                    <Link to='/shop'>
+                        Shop now
+                    </Link>
+                </button>
             </div>
+
+            <Routes>
+                <Route
+                    path='/shop'
+                    element={
+                        <Shop
+                            products={products}
+                            retrieveProducts={retrieveProducts}
+                            onItemQuantityChange={onItemQuantityChange}
+                            onAddItem={onAddItem}
+                            countCartItem={countCartItem}
+                        />
+                    }
+                />
+            </Routes>
         </main>
     )
 }
