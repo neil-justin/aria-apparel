@@ -3,7 +3,7 @@
 }
 
 #cart-heading {
-    margin: 1.5625rem 0;
+    margin-bottom: 1.5625rem;
 }
 
 div:has(> #cart-items-list + #cart-order-total-card) {
