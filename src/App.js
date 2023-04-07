@@ -19,14 +19,17 @@ function App() {
   */
   const [userItemQuantities, setUserItemQuantities] = useState({});
 
+  /* 
+  this function is only responsible for modifying userItemQuantities state
+  */
   function handleItemQuantityChange(event) {
     /*
     it is possible for the input's value to be NaN when the user empties
     the input. to prevent that from happening, if the input's value is not
     greater than 0, fallback to 0
   */
-    const inputNumericValue = parseInt(event.target.value) > 0 ?
-      parseInt(event.target.value) : 0;
+    const inputNumericValue =
+      parseInt(event.target.value) > 0 ? parseInt(event.target.value) : 0;
 
     setUserItemQuantities((prevUserItemQuantities) => {
       const updatedUserItemQuantities = {
@@ -35,6 +38,21 @@ function App() {
       };
       return updatedUserItemQuantities;
     })
+  }
+
+  function handleCartItemQuantityChange(event) {
+    const inputNumericValue =
+      parseInt(event.target.value) > 0 ? parseInt(event.target.value) : 0;
+
+    setCart((prevCart) => {
+      const updatedCart = prevCart.map(item => {
+        if (item.id === parseInt(event.target.dataset.cartInputFor)) {
+          item.quantity = inputNumericValue;
+        }
+        return item;
+      });
+      return updatedCart;
+    });
   }
 
   function handleAddItem(event) {
@@ -110,6 +128,13 @@ function App() {
     }
   }, [products])
 
+  function removeCartItem() {
+    setCart((prevCart) => {
+      const updatedCart = prevCart.filter(item => item.quantity !== 0);
+      return updatedCart;
+    });
+  }
+
   return (
     <div className="App">
       <header id='app-header'>
@@ -160,7 +185,14 @@ function App() {
         />
         <Route
           path='/cart'
-          element={<Cart cart={cart} />}
+          element={
+            <Cart
+              cart={cart}
+              onCartItemQuantityChange={handleCartItemQuantityChange}
+              removeCartItem={removeCartItem}
+              countCartItem={countCartItem}
+            />
+          }
         />
       </Routes>
     </div>

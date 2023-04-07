@@ -4,7 +4,7 @@ export default function CartOrderTotal({ orderTotal }) {
             <p className="cart-card-text">Order Summary</p>
             <p className="cart-card-text">
                 Total
-                <span id="cart-order-total-text" >{orderTotal}</span>
+                <span id="cart-order-total-text" >$ {orderTotal}</span>
             </p>
             <button
                 id='cart-checkout-button'

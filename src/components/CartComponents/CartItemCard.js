@@ -1,8 +1,21 @@
 import { useState } from "react";
 
-export default function CartItemCard({ item }) {
+export default function CartItemCard({
+    item,
+    itemId,
+    onCartItemQuantityChange,
+    removeCartItem,
+    countCartItem,
+}) {
     const { title, price, image, quantity } = item;
     const [itemQuantity, setItemQuantity] = useState(quantity);
+
+    function handleChange(e) {
+        setItemQuantity(e.target.value);
+        onCartItemQuantityChange(e);
+        removeCartItem();
+        countCartItem();
+    }
 
     return (
         <div className="cart-item-container">
@@ -18,8 +31,10 @@ export default function CartItemCard({ item }) {
                     type='number'
                     value={itemQuantity}
                     step='1'
-                    onChange={null}
+                    min='0'
+                    onChange={handleChange}
                     className='cart-card-text cart-item-input'
+                    data-cart-input-for={itemId}
                 />
             </div>
         </div>

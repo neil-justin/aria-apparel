@@ -24,7 +24,8 @@ div:has(> #cart-items-list + #cart-order-total-card) {
     flex-direction: row;
     gap: 0.9375rem 1.875rem;
     background-color: white;
-    padding: 1.4063rem
+    padding: 1.4063rem;
+    min-width: 20.125rem;
 }
 
 .cart-item-img {
@@ -81,6 +82,16 @@ div:has(> .cart-item-name + .cart-item-price + .cart-item-input) {
     height: max-content;
     flex: 1;
     min-width: 270px;
+}
+
+p:has(> span#cart-order-total-text) {
+    position: relative;
+}
+
+#cart-order-total-text {
+    position: absolute;
+    right: 0;
+    color: var(--accent-color);
 }
 
 #cart-checkout-button {
