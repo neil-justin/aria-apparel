@@ -14,9 +14,12 @@
     align-items: center;
 }
 
+#header-nav > ul {
+    display: flex;
+    gap: 2.1875rem;
+}
+
 #header-nav li {
-    display: inline-block;
-    margin-right: 2.1875rem;
     list-style-type: none;
 }
 
