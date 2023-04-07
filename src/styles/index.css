@@ -20,3 +20,12 @@ body {
 .App {
     padding: 0.9375rem clamp(1rem, 5vw, 10rem)
 }
+
+body {
+    min-height: 100vh;
+}
+
+#shop-body>p,
+#cart-body>p {
+    font-size: calc(32px * (2/3));
+}

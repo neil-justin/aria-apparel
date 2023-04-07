@@ -47,15 +47,17 @@ export default function Shop({
 
     return (
         <main id="shop-body">
-            <h1 id='shop-heading'>Products</h1>
             {isFetching ?
                 <p>Fetching data...</p> :
-                <ProductsList
-                    products={products}
-                    onItemQuantityChange={onItemQuantityChange}
-                    onAddItem={onAddItem}
-                    countCartItem={countCartItem}
-                />
+                <div>
+                    <h1 id='shop-heading'>Products</h1>
+                    <ProductsList
+                        products={products}
+                        onItemQuantityChange={onItemQuantityChange}
+                        onAddItem={onAddItem}
+                        countCartItem={countCartItem}
+                    />
+                </div>
             }
         </main>
     )

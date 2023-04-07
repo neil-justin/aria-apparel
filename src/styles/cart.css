@@ -1,0 +1,96 @@
+#cart-body {
+    margin: 2.5rem 0;
+}
+
+#cart-heading {
+    margin: 1.5625rem 0;
+}
+
+div:has(> #cart-items-list + #cart-order-total-card) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+}
+
+#cart-items-list {
+    display: flex;
+    flex: 2.5;
+    flex-direction: column;
+    row-gap: 1.25rem;
+}
+
+.cart-item-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0.9375rem 1.875rem;
+    background-color: white;
+    padding: 1.4063rem
+}
+
+.cart-item-img {
+    height: calc(14.0625rem * (1.5/3));
+    /* this centers the image when the card's texts wrap to the next line */
+    margin: 0 auto;
+    width: 6.25rem;
+}
+
+div:has(> .cart-item-name + .cart-item-price + .cart-item-input) {
+    height: fit-content;
+    flex: 1;
+    display: flex;
+    /* this takes effect when the card's texts wrap to the next line */
+    gap: 1.25rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.cart-card-text {
+    font-size: 1.4063rem;
+}
+
+.cart-item-name {
+    color: var(--secondary-color);
+    max-width: 28.125rem;
+    flex: 1 1 18.75rem;
+    max-width: 20.3125rem;
+}
+
+.cart-item-name,
+.cart-item-price,
+.cart-item-input {
+    height: fit-content;
+}
+
+.cart-item-price {
+    color: var(--accent-color);
+}
+
+.cart-item-input {
+    padding: calc(1.4063rem / 2);
+    background-color: whitesmoke;
+    border: none;
+    max-width: calc(1.4063rem * 3);
+}
+
+#cart-order-total-card {
+    background-color: white;
+    padding: 1.4063rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: calc(1.4063rem / 2);
+    height: max-content;
+    flex: 1;
+    min-width: 270px;
+}
+
+#cart-checkout-button {
+    padding: calc((1.4063rem / 2) / 2);
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#cart-checkout-button-reminder {
+    color: red;
+}

@@ -2,10 +2,12 @@ import './styles/header.css';
 import './styles/index.css';
 import './styles/home.css';
 import './styles/shop.css';
+import './styles/cart.css';
 import { Route, Routes, NavLink } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Home from './components/Home';
 import Shop from './components/Shop';
+import Cart from './components/Cart';
 
 function App() {
   const [products, setProducts] = useState(null);
@@ -145,6 +147,10 @@ function App() {
               countCartItem={countCartItem}
             />
           }
+        />
+        <Route
+          path='/cart'
+          element={<Cart cart={cart} />}
         />
       </Routes>
     </div>
