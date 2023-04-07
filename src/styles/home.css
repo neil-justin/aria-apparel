@@ -29,7 +29,11 @@
     padding: 0.625rem calc(0.625rem * 4);
     background-color: var(--secondary-color);
     border: transparent;
+}
+
+#hero-button>a {
     color: white;
+    text-decoration-line: none;
 }
 
 #hero-button:hover {
