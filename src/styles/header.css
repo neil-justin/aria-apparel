@@ -15,13 +15,17 @@
     align-items: center;
 }
 
-#header-nav > ul {
+#header-nav>ul {
     display: flex;
     gap: 2.1875rem;
 }
 
 #header-nav li {
     list-style-type: none;
+}
+
+#header-nav a.active {
+    color: var(--accent-color);
 }
 
 #header-nav a {
