@@ -102,6 +102,10 @@ p:has(> span#cart-order-total-text) {
     cursor: pointer;
 }
 
+#cart-checkout-button:hover {
+    background-color: hsl(22, 91%, 50%);
+}
+
 #cart-checkout-button-reminder {
     color: red;
 }

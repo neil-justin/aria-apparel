@@ -57,10 +57,14 @@
 
 .shop-product-input {
     padding: calc(1.4063rem / 2);
-    background-color: whitesmoke;
+    background-color: hsl(0, 0%, 96%);
     border: none;
 }
 
 .add-to-cart-button {
     cursor: pointer;
+}
+
+.add-to-cart-button:hover {
+    background-color: hsl(0, 0%, 91%)
 }
