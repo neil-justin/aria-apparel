@@ -9,7 +9,7 @@
 
 :root {
     --secondary-color: hsl(0, 0%, 15%);
-    --accent-color: #f57224;
+    --accent-color: hsl(22, 91%, 55%);
 }
 
 body {
