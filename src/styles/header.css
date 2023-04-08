@@ -5,9 +5,11 @@
     row-gap: calc(1.5625rem / 2);
 }
 
-#logo {
+#logo>a {
     font-size: 1.75rem;
     font-weight: bold;
+    color: var(--secondary-color);
+    text-decoration-line: none;
 }
 
 #header-nav {

@@ -3,7 +3,7 @@ import './styles/index.css';
 import './styles/home.css';
 import './styles/shop.css';
 import './styles/cart.css';
-import { Route, Routes, NavLink } from 'react-router-dom';
+import { Route, Routes, NavLink, Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Home from './components/Home';
 import Shop from './components/Shop';
@@ -144,7 +144,11 @@ function App() {
   return (
     <div className="App">
       <header id='app-header'>
-        <span id="logo">Aria Apparel</span>
+        <span id="logo">
+          <Link to='/'>
+            Aria Apparel
+          </Link>
+        </span>
 
         <nav id='header-nav'>
           <ul>
