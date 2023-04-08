@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/aria-apparel/static/css/main.016e95b8.css",
+    "main.js": "/aria-apparel/static/js/main.c1050a9c.js",
+    "index.html": "/aria-apparel/index.html",
+    "main.016e95b8.css.map": "/aria-apparel/static/css/main.016e95b8.css.map",
+    "main.c1050a9c.js.map": "/aria-apparel/static/js/main.c1050a9c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.016e95b8.css",
+    "static/js/main.c1050a9c.js"
+  ]
+}
