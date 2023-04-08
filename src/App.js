@@ -41,13 +41,16 @@ function App() {
   }
 
   function handleCartItemQuantityChange(event) {
-    const inputNumericValue =
-      parseInt(event.target.value) > 0 ? parseInt(event.target.value) : 0;
+    let inputIntValue = parseInt(event.target.value);
+
+    if (isNaN(inputIntValue)) {
+      inputIntValue = 1;
+    }
 
     setCart((prevCart) => {
       const updatedCart = prevCart.map(item => {
         if (item.id === parseInt(event.target.dataset.cartInputFor)) {
-          item.quantity = inputNumericValue;
+          item.quantity = inputIntValue;
         }
         return item;
       });
@@ -108,7 +111,10 @@ function App() {
   function countCartItem() {
     setCart((prevCart) => {
       const updatedCartItemQuantities = prevCart.reduce((accumulator, item) => {
-        return accumulator + item.quantity;
+        if (Number.isInteger(item.quantity)) {
+          return accumulator + item.quantity;
+        }
+        return accumulator;
       }, 0);
       setCartItemQuantities(updatedCartItemQuantities);
 

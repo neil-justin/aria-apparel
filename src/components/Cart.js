@@ -14,7 +14,6 @@ export default function Cart({
         const updatedOrderTotal = cart.reduce((accumulator, item) => {
             return accumulator + (item.quantity * item.price);
         }, 0);
-        console.log(updatedOrderTotal);
         setOrderTotal(updatedOrderTotal);
     }
 

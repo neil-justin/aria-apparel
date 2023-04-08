@@ -17,6 +17,15 @@ export default function CartItemCard({
         countCartItem();
     }
 
+    function handleInputBlur(e) {
+        if (e.target.value === '') {
+            window.alert('Please enter a valid quantity');
+            setItemQuantity(1);
+            onCartItemQuantityChange(e);
+            countCartItem();
+        }
+    }
+
     return (
         <div className="cart-item-container">
             <img
@@ -31,8 +40,8 @@ export default function CartItemCard({
                     type='number'
                     value={itemQuantity}
                     step='1'
-                    min='0'
                     onChange={handleChange}
+                    onBlur={handleInputBlur}
                     className='cart-card-text cart-item-input'
                     data-cart-input-for={itemId}
                 />
